@@ -1,5 +1,4 @@
 const baseURL= "http://www.omdbapi.com/?i=tt3896198&apikey=4038c2f4"
-let currentResult = null
 const searchInput = document.getElementById("search-input");
 const movieTitleElement = document.getElementById("movie-title")
 const releasedElement = document.getElementById("released")
@@ -38,7 +37,15 @@ function searchByTitle(title) {
         actorsElement.innerText = data.Actors || 'N/A'
         plotElement.innerText = data.Plot || 'N/A'
 
-        
+        if(data.Poster) {
+            currentResult = {
+                poster: data.Poster || "",
+                title: data.Title || 'N/A',
+                released: data.Released || 'N/A',
+            }
+        }
     }
-)
+).catch(err => {
+console.log('Catching our own errors', err)
+})
 }
