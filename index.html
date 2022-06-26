@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-        <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Movie Search</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Movie Search</title>
+  </head>
     <body>
+        <section class="main-section"></section>
         <h1>Search For Movies</h1>
+
         <div>
             <input
               id="search-input"
@@ -18,22 +19,23 @@
               type="search"
               placeholder="Search for songs, albums or artists"
             />
+
+            <button id="search-btn">Search</button>
+            
           </div>
       
-        <div>
-          <p>Results</p>
-          </div>
-          <div id="result-container" class="result-container">
-            <img id="movie-poster" class="poster" src="https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg" alt="Movie poster">
-            <div class="description-container">
-              <h3 id="movie-title"></h3>
-              <p id="released"></p>
-              <p id="actors"></p>
-              <p id="plot"></p>
+          <div>
+            <p>Results</p>
+        
+            <div id="result-container" class="result-container">
+              <img id="movie-poster" class="poster" src="https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg" alt="Movie poster">
+              <div class="description-container">
+                <h3 id="movie-title">N/A</h3>
+                <p id="released">N/A</p>
+                <p id="actors">N/A</p>
+                <p id="plot">N/A</p>
+              </div>
             </div>
-          </div>      
-      
-        </div>
           <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
