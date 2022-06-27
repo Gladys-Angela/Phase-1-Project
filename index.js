@@ -1,5 +1,9 @@
-const baseURL= "http://www.omdbapi.com/?apikey=e3eec50b&"
+const baseURL= "http://www.omdbapi.com/?apikey=e3eec50b&";
+
+let currentResult = null
+
 const searchInput = document.getElementById("search-input");
+const moviePosterElement = document.getElementById("movie-poster")
 const movieTitleElement = document.getElementById("movie-title")
 const releasedElement = document.getElementById("released")
 const actorsElement = document.getElementById("actors")
@@ -48,4 +52,17 @@ function searchByTitle(title) {
 ).catch(err => {
 console.log('Catching our own errors', err)
 })
+}
+
+function renderSavedMovie(savedMovie) {
+    const liElement = document.createElement('li')
+    liElement.classList.add('saved-movie-card')
+    const posterImage = document.createElement('img')
+    posterImage.src = savedMovie.poster;
+    const titleSpan = document.createElement('span')
+    titleSpan.innerText = savedMovie.title;
+    const releasedSpan = document.createElement('span');
+    releasedSpan.innerText = savedMovie.released;
+    liElement.append(posterImage, titleSpan, releasedSpan)
+    savedMoviesElement.append(liElement)
 }
