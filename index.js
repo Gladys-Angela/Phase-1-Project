@@ -1,4 +1,4 @@
-const baseURL= "http://www.omdbapi.com/?i=tt3896198&apikey=4038c2f4"
+const baseURL= "http://www.omdbapi.com/?apikey=e3eec50b&"
 const searchInput = document.getElementById("search-input");
 const movieTitleElement = document.getElementById("movie-title")
 const releasedElement = document.getElementById("released")
