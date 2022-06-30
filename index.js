@@ -1,4 +1,4 @@
-const baseURL= "http://www.omdbapi.com/?apikey=e3eec50b&";
+const baseURL= "https://www.omdbapi.com/?apikey=e3eec50b&";
 
 let currentResult = null
 
